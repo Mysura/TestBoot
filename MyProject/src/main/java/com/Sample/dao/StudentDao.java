@@ -24,10 +24,14 @@ private static Map<Integer, Student> smap;
 	}
 	
 	public Collection<Student> getStudents(){
-		
-		
+				
 		return this.smap.values();
 	}
 	
-	
+	public Student getStudentsById(int id){
+		return this.smap.get(3);
+		
+		
+		
+	}
 }

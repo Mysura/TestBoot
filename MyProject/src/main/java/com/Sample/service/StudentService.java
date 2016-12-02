@@ -18,6 +18,11 @@ public Collection<Student> getStudents(){
 		return sdao.getStudents();
 	}
 	
+public Student getStudentsById(int id){
+	return sdao.getStudentsById(id);
 	
+	
+	
+}
 	
 }
