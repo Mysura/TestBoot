@@ -8,17 +8,20 @@ import org.springframework.web.context.WebApplicationContext;
 
 @WebAppConfiguration
 public class AbstractControllerTest extends AbstractTest {
-public MockMvc mockMvc;
+	public MockMvc mockMvc;
+	@Autowired
+	public WebApplicationContext webApplicationContext;
+	
+	public void setUp(){
+		
+		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+		
+	}
+	
+	
+	
+	
+	
+	
 
-@Autowired
-public WebApplicationContext webApplicationContext;
-
-public void setUp(){
-	
-	mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-	
-	
-}
-	
-	
 }

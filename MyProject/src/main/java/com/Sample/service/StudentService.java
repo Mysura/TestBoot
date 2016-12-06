@@ -5,24 +5,14 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Sample.dao.StudentDao;
+import com.Sample.dao.StudentRepository;
 import com.Sample.model.Student;
 
 @Service
-public class StudentService {
-    @Autowired
-	private StudentDao sdao;
-public Collection<Student> getStudents(){
-		
-		
-		return sdao.getStudents();
-	}
+public interface StudentService {
 	
-public Student getStudentsById(int id){
-	return sdao.getStudentsById(id);
-	
-	
-	
-}
-	
+	public  Collection<Student> findAll();
+	public Student findOne(int id);
+	public Student save(Student student);
+	public void delete(int id);
 }
